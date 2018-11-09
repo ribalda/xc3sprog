@@ -1,0 +1,34 @@
+Source: xc3sprog
+Section: electronics
+Priority: optional
+Maintainer: Ricardo Ribalda Delgado <ricardo@ribalda.com>
+Build-Depends: cmake, debhelper (>= 11), libftdi1-dev, libusb-dev, pkg-config
+Standards-Version: 4.2.1
+Homepage: http://xc3sprog.sourceforge.net/
+Vcs-Browser: https://sourceforge.net/p/xc3sprog/code/HEAD/tree/
+Vcs-Svn: https://svn.code.sf.net/p/xc3sprog/code/
+Rules-Requires-Root: no
+
+Package: xc3sprog
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: JTAG flashing tool for FPGAs, CPLDs and EEPROMs
+ xc3sprog is a suite of utilities for programming Xilinx FPGAs, CPLDs, and
+ EEPROMs with the Xilinx Parallel Cable and other JTAG adapters under Linux.
+ xc3sprog runs as a command-line application.
+ .
+ The main features include:
+ - Reading a .BIT file from Xilinx design tools and programming it into an FPGA.
+ - Reading a JEDEC file and programming it into a CPLD.
+ - Programming a .BIT file into an on-board configuration PROM.
+ - Programming a binary image into on-board SPI flash memory.
+ - Reading the contents of a PROM chip back to a file.
+ - Programming AVR microcontrollers.
+ .
+ The functionality of xc3sprog is similar to that of Xilinx IMPACT. There are also similarities with other free JTAG tools, such as UrJTAG. However, xc3sprog has a number of advantages:
+ .
+ - xc3sprog is free software.
+ - It is a command-line tool.
+ - It works on Linux without the need to install binary "cable-drivers". (Although some types of JTAG cables need to load firmware.)
+ - It uses an optional configuration file to recognize new JTAG devices.
+ - It contains programming algorithms for the supported devices, enabling the direct use of binary files (.BIT / JEDEC) from design tools (as opposed to intermediate SVF/STAPLE files).

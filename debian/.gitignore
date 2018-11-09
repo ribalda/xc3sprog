@@ -1,0 +1,6 @@
+.debhelper/
+debhelper-build-stamp
+files
+xc3sprog.debhelper.log
+xc3sprog.substvars
+xc3sprog/
